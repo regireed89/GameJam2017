@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBehavior : MonoBehaviour
+public class PlayerBehavior : MonoBehaviour, IKillable
 {
 
     // Use this for initialization
     PlayerData data;
+
+    public void Die()
+    {
+        data.alive = false;
+        if (data.alive == false)
+            transform.Rotate(90, 0, 0);
+    }
 
     void Start()
     {
