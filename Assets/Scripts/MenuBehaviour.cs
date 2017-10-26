@@ -10,7 +10,7 @@ public class MenuBehaviour : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("1.Regi");
+        SceneManager.LoadScene("0.Main");
     }
 
     public void MainMenu()
