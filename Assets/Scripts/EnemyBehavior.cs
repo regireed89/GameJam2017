@@ -1,20 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyBehavior : MonoBehaviour, IKiller {
-    public void Kill()
+public class EnemyBehavior : MonoBehaviour{
+
+    private void OnTriggerEnter(Collider other)
     {
-        throw new System.NotImplementedException();
+        if (other.tag == "Player")
+            SceneManager.LoadScene("1.MainMenu");
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
