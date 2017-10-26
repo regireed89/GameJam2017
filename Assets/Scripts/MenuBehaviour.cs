@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class MenuBehaviour : MonoBehaviour
 {
+    public GameObject panel;
+
     public void NewGame()
     {
         SceneManager.LoadScene("0.Main");
@@ -24,14 +26,25 @@ public class MenuBehaviour : MonoBehaviour
         Application.Quit();
     }
 
-    public void Resume(GameObject panel)
+    public void Resume()
     {
-        panel.GetComponent<Image>().enabled = false;
-        panel.GetComponentInChildren<Text>().enabled = false;
-        foreach (var button in panel.GetComponentsInChildren<Button>())
-        {
-            button.gameObject.SetActive(false);
-        }
+        panel.SetActive(false);
         Time.timeScale = 1.0f;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (panel.activeSelf)
+                Resume();
+
+            else
+            {
+                Time.timeScale = 0f;
+                panel.SetActive(true);
+            }
+
+        }
     }
 }
