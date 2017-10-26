@@ -260,6 +260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b863708ec632b4d9f05d835edd5ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MenuAudioClip: {fileID: 0}
+  MenuAudioSource: {fileID: 82285751886115452, guid: 404a99f3b2c7da349a1a35c63ed27bb0,
+    type: 2}
+  panel: {fileID: 0}
 --- !u!114 &114168424493172262
 MonoBehaviour:
   m_ObjectHideFlags: 1
