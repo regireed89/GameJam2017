@@ -1,19 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerBehavior : MonoBehaviour, IKillable
+public class PlayerBehavior : MonoBehaviour
 {
 
     // Use this for initialization
-    PlayerData data;
-
-    public void Die()
-    {
-        data.alive = false;
-        if (data.alive == false)
-            transform.Rotate(90, 0, 0);
-    }
+    [HideInInspector]
+    public PlayerData data;
+    bool lightToggle;
 
     void Start()
     {
@@ -36,10 +32,10 @@ public class PlayerBehavior : MonoBehaviour, IKillable
         {
             if (data.sprintTimer <= 0)
             {
-                transform.Translate(moveh * -.4f, 0, movev * -.4f);
+                transform.Translate(moveh * -.3f, 0, movev * -.3f);
                 data.sprintTimer = 0;
             }
-            transform.Translate(moveh * .4f, 0, movev * .4f);
+            transform.Translate(moveh * .3f, 0, movev * .3f);
             data.sprintTimer -= .1f;
 
         }
@@ -49,5 +45,25 @@ public class PlayerBehavior : MonoBehaviour, IKillable
             if (data.sprintTimer >= 10)
                 data.sprintTimer = 10;
         }
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            
+            if(lightToggle == false)
+            {
+                lightToggle = true;
+                GetComponentInChildren<Light>().enabled = lightToggle;
+                return;
+            }
+            lightToggle = false;
+            GetComponentInChildren<Light>().enabled = lightToggle;
+
+        }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Finish")
+        { }
     }
 }
