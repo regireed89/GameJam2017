@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class MenuBehaviour : MonoBehaviour
 {
+    public AudioClip MenuAudioClip;
+    public AudioSource MenuAudioSource;
     public GameObject panel;
 
     public void NewGame()
@@ -30,6 +32,12 @@ public class MenuBehaviour : MonoBehaviour
     {
         panel.SetActive(false);
         Time.timeScale = 1.0f;
+    }
+
+    void Start()
+    {
+        MenuAudioSource.clip = MenuAudioClip;
+        MenuAudioSource.Play();
     }
 
     void Update()
