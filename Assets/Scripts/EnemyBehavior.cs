@@ -14,9 +14,10 @@ public class EnemyBehavior : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        anim.SetTrigger("Attack");
+        
         if (other.tag == "Player")
         {
+            anim.SetTrigger("Attack");
             StartCoroutine(GameOver());
         }
            
