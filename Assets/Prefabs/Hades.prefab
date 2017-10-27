@@ -141,6 +141,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4272737455784282}
+  - component: {fileID: 54602886887229456}
+  - component: {fileID: 136050634431217720}
+  - component: {fileID: 135957851496833352}
+  - component: {fileID: 95505788745979134}
+  - component: {fileID: 195222445302693134}
+  - component: {fileID: 114743359688406366}
+  - component: {fileID: 114469227781687522}
   m_Layer: 0
   m_Name: Hades
   m_TagString: Untagged
@@ -156,7 +163,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4387639393563838}
-  - component: {fileID: 95979873462146934}
   m_Layer: 0
   m_Name: Monster_Mesh
   m_TagString: Untagged
@@ -590,7 +596,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1239527071831028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.0004853, y: 0.5, z: 4.186517}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4387639393563838}
@@ -977,13 +983,28 @@ Transform:
   m_Father: {fileID: 4792597987426766}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95979873462146934
+--- !u!54 &54602886887229456
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239527071831028}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &95505788745979134
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1254186487366934}
+  m_GameObject: {fileID: 1239527071831028}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5eedbf6b4b4c9ac44a89d830a526fdbb, type: 3}
   m_Controller: {fileID: 9100000, guid: 970680ca6997ac741a7cd667892f9cfd, type: 2}
@@ -994,6 +1015,54 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114469227781687522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239527071831028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bee4752753d5c45b0afa8e6d38739a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114743359688406366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239527071831028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a397f1a49afe4984f889dec288d85aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goal: {fileID: 0}
+--- !u!135 &135957851496833352
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239527071831028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.09
+  m_Center: {x: 0, y: 1.4034212, z: 0.26593685}
+--- !u!136 &136050634431217720
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239527071831028}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.83000004
+  m_Height: 2.1503768
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0306304, z: 0.36}
 --- !u!137 &137616161591551774
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1065,6 +1134,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.1362307, y: -0.16808102, z: 0.016665936}
     m_Extent: {x: 1.3118124, y: 0.63904583, z: 1.7000301}
   m_DirtyAABB: 0
+--- !u!195 &195222445302693134
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239527071831028}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1.37
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: -0.12
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!198 &198433280107869870
 ParticleSystem:
   m_ObjectHideFlags: 1
