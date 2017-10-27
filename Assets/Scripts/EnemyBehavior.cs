@@ -17,6 +17,7 @@ public class EnemyBehavior : MonoBehaviour
         anim.SetTrigger("Attack");
         if (other.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
             StartCoroutine(GameOver());
         }
            

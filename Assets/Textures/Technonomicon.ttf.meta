@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8f1fddf10e685c24796977184c9dee04
+timeCreated: 1509122823
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Technonomicon
+  fontNames:
+  - Technonomicon
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
