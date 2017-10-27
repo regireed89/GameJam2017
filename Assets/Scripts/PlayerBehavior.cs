@@ -66,7 +66,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         if(other.tag == "finish")
         {
-            canvas.enabled = true;
+            canvas.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
