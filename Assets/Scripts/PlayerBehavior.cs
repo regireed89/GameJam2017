@@ -40,7 +40,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (data.sprintTimer <= 0)
             {
-              
+            
                 data.sprintTimer = 0;
             }
       

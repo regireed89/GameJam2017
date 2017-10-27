@@ -1020,6 +1020,15 @@ Prefab:
       propertyPath: goal
       value: 
       objectReference: {fileID: 1492463322}
+    - target: {fileID: 195124642730868632, guid: 6afad76042798954d9981020cecc05ef,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239527071831028, guid: 6afad76042798954d9981020cecc05ef, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6afad76042798954d9981020cecc05ef, type: 2}
   m_IsPrefabParent: 0
@@ -1039,13 +1048,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 51ee6994c22f191439254d587729fb81, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 183
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
