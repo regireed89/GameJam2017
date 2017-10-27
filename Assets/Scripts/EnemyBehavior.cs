@@ -14,10 +14,10 @@ public class EnemyBehavior : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        
+        anim.SetTrigger("Attack");
         if (other.tag == "Player")
         {
-            anim.SetTrigger("Attack");
+            GetComponent<AudioSource>().Play();
             StartCoroutine(GameOver());
         }
            
@@ -25,7 +25,7 @@ public class EnemyBehavior : MonoBehaviour
 
     IEnumerator GameOver()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3.5f);
         SceneManager.LoadScene("1.MainMenu");
     }
 }

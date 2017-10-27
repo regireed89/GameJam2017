@@ -11,9 +11,11 @@ public class PlayerBehavior : MonoBehaviour
     public PlayerData data;
     bool lightToggle;
     public Canvas canvas;
+    Rigidbody rb;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         data = ScriptableObject.CreateInstance<PlayerData>();
         data.sprintTimer = 10;
     }
@@ -21,22 +23,27 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveh = Input.GetAxis("Horizontal");
-        float movev = Input.GetAxis("Vertical");
         float roth = Input.GetAxis("Mouse X");
 
 
-        transform.Translate(moveh * .2f, 0, movev * .2f);
         transform.Rotate(0, roth * 2, 0);
+        if (Input.GetKey(KeyCode.W))
+            rb.MovePosition(transform.position + transform.forward * Time.deltaTime * 10);
+        if (Input.GetKey(KeyCode.A))
+            rb.MovePosition(transform.position + (transform.right * -1) * Time.deltaTime * 10);
+        if (Input.GetKey(KeyCode.S))
+            rb.MovePosition(transform.position + (transform.forward * -1 )* Time.deltaTime * 10);
+        if (Input.GetKey(KeyCode.D))
+            rb.MovePosition(transform.position + transform.right * Time.deltaTime * 10);
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
             if (data.sprintTimer <= 0)
             {
-                transform.Translate(moveh * -.3f, 0, movev * -.3f);
+            
                 data.sprintTimer = 0;
             }
-            transform.Translate(moveh * .3f, 0, movev * .3f);
+      
             data.sprintTimer -= .1f;
 
         }
@@ -46,7 +53,7 @@ public class PlayerBehavior : MonoBehaviour
             if (data.sprintTimer >= 10)
                 data.sprintTimer = 10;
         }
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             
             if(lightToggle == false)
