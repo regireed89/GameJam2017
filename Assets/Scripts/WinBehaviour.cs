@@ -11,7 +11,7 @@ public class WinBehaviour : MonoBehaviour
     {
         rand = new Random();
         List<GameObject> finishes = new List<GameObject>();
-        foreach (var finishingGameObject in GameObject.FindGameObjectsWithTag("finish"))
+        foreach (var finishingGameObject in GameObject.FindGameObjectsWithTag("Finish"))
         {
                 finishes.Add(finishingGameObject);
         }
@@ -21,9 +21,4 @@ public class WinBehaviour : MonoBehaviour
         gameOver.GetComponent<BoxCollider>().isTrigger = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
