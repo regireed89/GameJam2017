@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: 87b863708ec632b4d9f05d835edd5ff1
-timeCreated: 1509027566
+timeCreated: 1509113511
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - MenuAudioClip: {fileID: 8300000, guid: 718e4fa4159f90745a4c5a4e01dd102d, type: 3}
+  - MenuAudioSource: {instanceID: 0}
+  - panel: {fileID: 1933612907481472, guid: 20e4ef4169e5211438c4f05c0c7a01de, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -1311,9 +1311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b863708ec632b4d9f05d835edd5ff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuAudioClip: {fileID: 0}
+  MenuAudioClip: {fileID: 8300000, guid: 1fa4f6cf29c52cd49a6b564d42833ce8, type: 3}
   MenuAudioSource: {fileID: 0}
-  panel: {fileID: 0}
+  panel: {fileID: 1933612907481472, guid: 20e4ef4169e5211438c4f05c0c7a01de, type: 2}
 --- !u!114 &611572425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2168,6 +2168,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 136155596438465676, guid: 87c4212d425fe2a42ab57aed6825180a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114665472110019702, guid: 87c4212d425fe2a42ab57aed6825180a,
+        type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 611572422}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87c4212d425fe2a42ab57aed6825180a, type: 2}
   m_IsPrefabParent: 0
@@ -2644,7 +2654,7 @@ GameObject:
   - component: {fileID: 2111006305}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2690,7 +2700,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2111006304}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

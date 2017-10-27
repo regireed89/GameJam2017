@@ -10,6 +10,7 @@ public class PlayerBehavior : MonoBehaviour
     [HideInInspector]
     public PlayerData data;
     bool lightToggle;
+    public Canvas canvas;
 
     void Start()
     {
@@ -63,7 +64,9 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Finish")
-        { }
+        if(other.tag == "finish")
+        {
+            canvas.enabled = true;
+        }
     }
 }
