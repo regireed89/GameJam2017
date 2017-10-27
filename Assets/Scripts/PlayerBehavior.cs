@@ -7,17 +7,14 @@ public class PlayerBehavior : MonoBehaviour
 {
 
     // Use this for initialization
-    public Canvas canvas;
     [HideInInspector]
     public PlayerData data;
     bool lightToggle;
 
     void Start()
     {
-        canvas.enabled = false;
         data = ScriptableObject.CreateInstance<PlayerData>();
         data.sprintTimer = 10;
-        
     }
 
     // Update is called once per frame
@@ -66,9 +63,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "finish")
-        {
-            canvas.enabled = true;
-        }
+        if(other.tag == "Finish")
+        { }
     }
 }
